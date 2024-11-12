@@ -21,8 +21,12 @@
 
 
 ## 대표 이미지
+<details>
+<summary>설문 페이지</summary>
 
+![image](https://github.com/user-attachments/assets/f5b91a2a-690c-45e6-a071-df33087726b2)
 
+</details>
   
 ## 프로젝트 일정
 - 1주차 (11.11 ~ 11.17)
