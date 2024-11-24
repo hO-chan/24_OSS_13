@@ -1,0 +1,123 @@
+body {
+    height: 100vh;
+}
+
+header {
+    box-sizing: border-box;
+    display: block;
+
+    height: 12vh;
+
+    border: 2px solid black;
+
+    background-color: rgb(170, 224, 120);
+
+}
+
+#Title {
+    box-sizing: border-box;
+
+    /*border: 1px solid black;*/
+
+    margin: 5px;
+
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif, 'Noto Sans';
+}
+
+.nav {
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.nav-item {
+
+    border: 1px solid black;
+
+    font-family: sans-serif;
+}
+
+main {
+    box-sizing: border-box;
+
+    display: flex;
+    /*자식 요소 높낮이 맞춤*/
+
+    height: 85vh;
+
+    /*
+    border: 1px solid black;
+    border-radius: 5px;
+*/
+
+}
+
+
+.main_main1 {
+    box-sizing: border-box;
+    display: inline-block;
+
+    width: 76%;
+    height: 95%;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 4%;
+    margin-right: auto;
+
+
+    border: 1px solid black;
+
+
+}
+
+.main_side1 {
+    box-sizing: border-box;
+    display: inline-block;
+
+    width: 15%;
+    height: 95%;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 3%;
+
+
+
+    border: 1px solid black;
+
+
+}
+
+.main_side1 div {
+    border: 1px solid blue;
+}
+
+.main_side1_menu1 {
+    box-sizing: border-box;
+
+    margin: 3px;
+
+}
+
+.main_side1_menu2 {
+    box-sizing: border-box;
+    margin: 3px;
+
+
+}
+
+
+
+footer {
+    box-sizing: border-box;
+    height: 5vh;
+
+    border: 1px solid red;
+
+    font-size: 11px;
+    text-align: center;
+}
