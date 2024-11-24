@@ -22,7 +22,7 @@
   - 
 
 ##### 황영찬
-  - 홈페이지 기본 틀 구성
+  - 홈페이지 기본 틀 구성  ([Commit Link](https://github.com/hO-chan/24_OSS_13/commit/06570442ecf6032039844c4729a8bee6ccca973a))
 
 ##### 전병찬
   - 
