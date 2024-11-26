@@ -1,157 +1,103 @@
 body {
-    /*전체 페이지 크기*/
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 header {
-    box-sizing: border-box;
-    display: block;
-
-    height: 12vh;
-
-    border: 2px solid black;
-
     background-color: rgb(170, 224, 120);
-
+    border: 2px solid black;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
 }
 
 #Title {
-    box-sizing: border-box;
-
-    /*border: 1px solid black;*/
-
-    margin: 5px;
-
-    font-size: 25px;
+    font-size: 22px;
     color: white;
     font-weight: bold;
     font-family: sans-serif, 'Noto Sans';
-}
-
-.nav {
-    margin-top: 5px;
-    margin-right: 15px;
+    margin: 0;
 }
 
 .nav-item {
-
     border: 1px solid black;
-
     font-family: sans-serif;
 }
 
-main {
-    /*설문 페이지와 사이드 메뉴 등 모든 내용을 담은 main페이지*/
-    box-sizing: border-box;
-
-    display: flex;
-    /*자식 요소 높낮이 맞춤*/
-
-    height: 85vh;
-
-    /*
-    border: 1px solid black;
-    border-radius: 5px;
-*/
-
+.active {
+    background-color: rgb(134, 199, 73) !important;
 }
 
+.nav-item:hover {
+    background-color: rgb(134, 199, 73);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    margin: 0;
+}
 
 .main_main1 {
-    /*설문 페이지*/
-    box-sizing: border-box;
+    flex-grow: 1;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.survey-div {
+    display: flex;
+    /*a와 mark 나란히*/
+    height: 100px;
+    width: 95%;
+
+    border: 3px solid rgb(176, 176, 176);
+    border-radius: 5px;
+
+    text-align: left;
+
+}
+
+.survey-div:hover {
+    background-color: rgba(88, 88, 88, 0.2);
+}
+
+.survey-div a {
     display: inline-block;
 
-    /* 다음 페이지로 를 밑으로 고정*/
-    display: flex;
-    flex-direction: column;
-    /* 다음 페이지로 를 밑으로 고정*/
-
-    width: 76%;
-    height: 95%;
-
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 4%;
-    margin-right: auto;
-
-    padding: 20px;
-
-
-    border: 1px solid black;
-
-
-}
-
-.main_main1_title {
-    /*설문 페이지의 위에 나타나는 "설문 제목" 부분*/
-    text-align: center;
-    font-size: large;
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+    font-size: 35px;
     font-weight: bold;
-    border: 1px solid black;
+
+    white-space: nowrap;
 
 }
 
-.main_main1_Qgroup {
-    /*질문 그룹*/
-    font-size: small;
-}
+.survey-link-mark {
+    display: inline-block;
+    color: rgb(88, 88, 88);
 
-.main_main1_next {
-    /*설문의 다음 페이지로 부분*/
-    border: 1px solid black;
-    font-size: small;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: 1px;
+    margin-left: 70%;
+    font-size: 55px;
+    overflow: hidden;
 }
 
 .main_side1 {
-    /*main의 옆에 나타나는 메뉴*/
-    box-sizing: border-box;
-    display: inline-block;
-
     width: 15%;
-    height: 95%;
-
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 3%;
-
-
-
+    max-width: 300px;
+    padding: 15px;
+    background-color: #f8f9fa;
     border: 1px solid black;
-
-
 }
-
-.main_side1 div {
-    border: 1px solid blue;
-}
-
-.main_side1_menu1 {
-    box-sizing: border-box;
-
-    margin: 3px;
-
-}
-
-.main_side1_menu2 {
-    box-sizing: border-box;
-    margin: 3px;
-
-
-}
-
-
 
 footer {
-    box-sizing: border-box;
     height: 5vh;
-
-    border: 1px solid red;
-
+    border-top: 1px solid black;
     font-size: 11px;
     text-align: center;
+    padding: 5px 0;
 }
