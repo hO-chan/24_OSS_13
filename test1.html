@@ -2,70 +2,116 @@
 <html>
 
 <head>
-    <title>Self_Doc</title>
-    <!-- boot strap set up -->
+    <title>Self_Doc - 페이지 2</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" />
-    <!-- /boot strap set up -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
 
+        #Title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #007bff;
+            color: white;
+        }
+
+        #NavBar {
+            background-color: #e9ecef;
+            padding: 10px 0;
+        }
+
+        .main_main1 {
+            text-align: left;
+            margin: 30px auto;
+            width: 600px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            background-color: #e9ecef;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div id="Title">
-            Self_Doc
+            Self_Doc - 페이지 2
         </div>
         <div id="NavBar">
             <div class="nav nav-pills nav-justified">
-                <li>
-                    <img src="Sample_icon.png" alt="icon Img" width=40 height=40 style="margin-right: 30px;" />
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="index.html">페이지1</a>
-                </li>
-                <li class="nav-item">
-                    <a class=" nav-link active" href="test1.html">페이지2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="test2.html">페이지3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">긴 이름 입력</a>
-                </li>
-                </ul>
+                <a class="nav-link" href="index.html">페이지1</a>
+                <a class="nav-link active" href="test1.html">페이지2</a>
+                <a class="nav-link" href="test2.html">페이지3</a>
             </div>
+        </div>
     </header>
+
     <main>
         <div class="main_main1">
-            test1
-        </div>
-        <div class="main_side1">
-            test2
+            <h2>자가진단 서비스 - 페이지 2</h2>
+            <form>
+                <p>질문1) 자주 외로움을 느낀다.<br>
+                    그렇다 <input type="radio" name="Q1" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q1" value="0">
+                </p>
+                <p>질문2) 자주 일을 잊어버린다.<br>
+                    그렇다 <input type="radio" name="Q2" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q2" value="0">
+                </p>
+                <p>질문3) 잠들기 힘들거나 잠이 불편하거나 과도하게 잤다.<br>
+                    그렇다 <input type="radio" name="Q3" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q3" value="0">
+                </p>
+                <p>질문4) 무엇을 해도 재밌지가 않다.<br>
+                    그렇다 <input type="radio" name="Q4" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q4" value="0">
+                </p>
+                <p>질문5) 쉽게 피로감을 느낀다.<br>
+                    그렇다 <input type="radio" name="Q5" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q5" value="0">
+                </p>
+                <p>질문6) 일에 집중이 되지 않는다.<br>
+                    그렇다 <input type="radio" name="Q6" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q6" value="0">
+                </p>
+                <p>질문7) 입맛이 없다.<br>
+                    그렇다 <input type="radio" name="Q7" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q7" value="0">
+                </p>
+                <p>질문8) 일을 시작하거나 유지하기 힘들다.<br>
+                    그렇다 <input type="radio" name="Q8" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q8" value="0">
+                </p>
+                <p>질문9) 목과 가슴에 턱 막힌 느낌이 든다.<br>
+                    그렇다 <input type="radio" name="Q9" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q9" value="0">
+                </p>
+                <p>질문10) 모든 일이 귀찮다.<br>
+                    그렇다 <input type="radio" name="Q10" value="1"> 
+                    그렇지 않다 <input type="radio" name="Q10" value="0">
+                </p>
+                <a href="test2.html" class="btn btn-primary">다음 페이지로 이동</a>
+            </form>
         </div>
     </main>
 
     <footer>
-
-        footer position<br>
-        KW-Univ
+        &copy; 2024 Self_Doc
     </footer>
-    <!-- boot strap set up -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-
-
-
-        </script>
-    <!-- /boot strap set up -->
-
-
 </body>
-
-
-
-
 
 </html>
