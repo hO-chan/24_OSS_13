@@ -26,7 +26,8 @@
   - github.io 페이지 개설.
 
 ##### 황영찬
-  - 설문페이지 문항 추가  ([Commit Link](https://github.com/hO-chan/24_OSS_13/commit/06570442ecf6032039844c4729a8bee6ccca973a))
+  - 설문 페이지 문항 추가  ([Commit Link](https://github.com/hO-chan/24_OSS_13/commit/06570442ecf6032039844c4729a8bee6ccca973a))
+  - 설문 페이지 디자인 수정 ([Commit Link](https://github.com/hO-chan/24_OSS_13/commit/376f55fcbd4bb6df2c036780f57ad6ab29731ef9))
 
 ##### 전병찬
   - 화면 전환 기능 구현. [Commit Link](https://github.com/hO-chan/24_OSS_13/commit/bca908e9b6c679df01fd05b56054bfe5890462b5)
