@@ -1,123 +1,189 @@
+/* 공통 설정 */
 body {
-    height: 100vh;
-}
-
-header {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    display: block;
-
-    height: 12vh;
-
-    border: 2px solid black;
-
-    background-color: rgb(170, 224, 120);
-
 }
 
+/* 헤더 스타일 */
 #Title {
-    box-sizing: border-box;
-
-    /*border: 1px solid black;*/
-
-    margin: 5px;
-
-    font-size: 25px;
-    color: white;
+    font-size: 2rem;
     font-weight: bold;
-    font-family: sans-serif, 'Noto Sans';
-}
-
-.nav {
-    margin-top: 5px;
-    margin-right: 15px;
-}
-
-.nav-item {
-
-    border: 1px solid black;
-
-    font-family: sans-serif;
-}
-
-main {
-    box-sizing: border-box;
-
-    display: flex;
-    /*자식 요소 높낮이 맞춤*/
-
-    height: 85vh;
-
-    /*
-    border: 1px solid black;
-    border-radius: 5px;
-*/
-
-}
-
-
-.main_main1 {
-    box-sizing: border-box;
-    display: inline-block;
-
-    width: 76%;
-    height: 85%;
-
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 4%;
-    margin-right: auto;
-
-
-    border: 1px solid black;
-
-
-}
-
-.main_side1 {
-    box-sizing: border-box;
-    display: inline-block;
-
-    width: 15%;
-    height: 95%;
-
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 3%;
-
-
-
-    border: 1px solid black;
-
-
-}
-
-.main_side1 div {
-    border: 1px solid blue;
-}
-
-.main_side1_menu1 {
-    box-sizing: border-box;
-
-    margin: 3px;
-
-}
-
-.main_side1_menu2 {
-    box-sizing: border-box;
-    margin: 3px;
-
-
-}
-
-
-
-footer {
-    box-sizing: border-box;
-    height: 5vh;
-
-    border: 1px solid red;
-
-    font-size: 11px;
     text-align: center;
+    padding: 15px 0;
+    background-color: #007bff;
+    color: white;
+}
+
+#NavBar {
+    background-color: #e9ecef;
+    padding: 10px 0;
+}
+
+header .nav-item .nav-link {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+header .nav-link.active {
+    background-color: #007bff;
+    color: white !important;
+}
+
+/* 메인 컨테이너 */
+.main_main1 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 지정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 20px 0; /* 상하 여백 */
+    gap: 20px; /* 상단, 하단 간격 */
+}
+
+/* 상단 슬라이더 박스 */
+.main_main1-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 슬라이더 컨테이너 */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px; /* 슬라이더와 아래 콘텐츠 간격 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 슬라이더 */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform; /* 성능 최적화 */
+}
+
+.slider-image {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover; /* 이미지 비율 유지 */
+    height: 400px;
+}
+
+/* 이전/다음 버튼 */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px; /* 크기 증가 */
+    height: 50px;
+    font-size: 1.8rem; /* 버튼 안 화살표 크기 증가 */
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.slider-btn.prev {
+    left: 20px; /* 간격 조정 */
+}
+
+.slider-btn.next {
+    right: 20px; /* 간격 조정 */
+}
+
+/* 하단 자가진단 박스 */
+.main_main1-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_diagnosis {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main_diagnosis h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.main_diagnosis p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.main_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.main_buttons button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main_buttons button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #e9ecef;
+    font-size: 0.9rem;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 768px) {
+    .main_main1 {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .slider-container {
+        max-width: 100%;
+    }
+
+    .main_diagnosis {
+        width: 90%;
+    }
+
+    .main_buttons {
+        flex-direction: column; /* 버튼 세로 배치 */
+        gap: 10px;
+    }
 }
