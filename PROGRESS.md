@@ -22,7 +22,7 @@
   - github.io 페이지 개설.
 
 ##### 황영찬
-  - 홈페이지 기본 틀 구성  ([Commit Link](https://github.com/hO-chan/24_OSS_13/commit/06570442ecf6032039844c4729a8bee6ccca973a))
+  - 설문페이지 문항 추가  ([Commit Link]([https://github.com/hO-chan/24_OSS_13/commit/06570442ecf6032039844c4729a8bee6ccca973a](https://github.com/hO-chan/24_OSS_13/commit/f1d1857624462db60e90c339797c0f0a3ddec42b)))
 
 ##### 전병찬
   - 화면 전환 기능 구현. [Commit Link](https://github.com/hO-chan/24_OSS_13/commit/bca908e9b6c679df01fd05b56054bfe5890462b5)
