@@ -1,57 +1,161 @@
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+/* Grid 컨테이너 설정 */
+.grid-container {
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr 50px; /* 행: Header, Middle Header, Middle Footer, Footer */
+    grid-template-columns: 1fr 1fr; /* 열: Middle, Right */
+    gap: 10px; /* 칸 간격 */
+    height: 100vh; /* 전체 화면 높이 */
 }
 
-header {
-    background-color: rgb(170, 224, 120);
-    border: 2px solid black;
-    height: 12vh;
+/* Header 전체 스타일 */
+.header {
+    grid-column: 1 / -1; /* 전체 열 차지 */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* 좌: 1, 중: 3 비율로 배치 */
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5px 5px;
+}
+
+/* Header 내부 요소 */
+.header-left {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
+    justify-content: flex-end; /* 왼쪽 정렬 */
 }
 
-#Title {
-    font-size: 22px;
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif, 'Noto Sans';
-    margin: 0;
-}
-
-.nav-item {
-    border: 1px solid black;
-    font-family: sans-serif;
-}
-
-main {
-    flex: 1;
+.header-center {
     display: flex;
-    margin: 0;
+    align-items: center;
+    justify-content: center; /* 텍스트를 왼쪽 정렬로 조정 */
+    font-size: 24px; /* 글자 크기 */
+    font-weight: bold; /* 글자 굵기 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    color: #333; /* 텍스트 색상 */
+    letter-spacing: 1px; /* 글자 간격 */
+    margin-left: 0px; /* 으로 이동 */
 }
 
-.main_main1 {
-    flex-grow: 1;
-    padding: 15px;
-    border: 1px solid black;
+/* Header 오른쪽 (네비게이션) */
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    gap: 15px; /* 링크 간 간격 */
+    padding-right: 10px; /* 오른쪽 여백 조정 (10px) */
 }
 
-.main_side1 {
-    width: 15%;
-    max-width: 300px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border: 1px solid black;
+/* 아이콘 이미지 스타일 */
+.header-icon {
+    width: 50px; /* 아이콘 크기 */
+    height: 50px; /* 아이콘 크기 */
+    object-fit: contain; /* 아이콘 비율 유지 */
+    margin-left: 100px; /* 오른쪽 여백 */
 }
 
-footer {
-    height: 5vh;
-    border-top: 1px solid black;
-    font-size: 11px;
-    text-align: center;
-    padding: 5px 0;
+/* 네비게이션 링크 스타일 */
+.nav-link {
+    text-decoration: none; /* 기본 밑줄 제거 */
+    font-size: 18px; /* 링크 글자 크기 */
+    font-weight: 500; /* 링크 글자 굵기 */
+    color: #3f2c7d; /* 링크 기본 색상 */
+    transition: color 0.3s ease; /* 마우스 호버 효과 추가 */
+}
+
+.nav-link:hover {
+    color: #0056b3; /* 호버 시 색상 변경 */
+}
+
+/* 반응형 처리: 작은 화면에서 정렬 보정 */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr; /* 열을 하나로 */
+        text-align: center; /* 텍스트 중앙 정렬 */
+        height: auto; /* 높이 자동 조정 */
+    }
+    
+    .header-left {
+        justify-content: center; /* 왼쪽 요소도 중앙 정렬 */
+        margin-bottom: 5px; /* 아래 여백 추가 */
+    }
+    
+    .header-center {
+        justify-content: center; /* 중앙 정렬 */
+    }
+    
+    .header-icon {
+        margin-right: 0; /* 아이콘 여백 제거 */
+    }
+}
+
+/* Middle Header (이미지 슬라이더) */
+.middle-header {
+    grid-column: 1 / 2; /* 첫 번째 열 */
+    background-color: #cce5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* 슬라이더 밖 영역 숨기기 */
+}
+
+/* 슬라이더 컨테이너 */
+.slider-container {
+    width: 100%; /* 부모 요소의 너비에 맞춤 */
+    height: 400px; /* 슬라이더 높이 */
+    overflow: hidden;
+    position: relative;
+}
+
+/* 슬라이더 (이미지들을 가로로 배치) */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* 전환 애니메이션 */
+}
+
+/* 각 이미지 스타일 */
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지 비율 유지하며 크기에 맞춤 */
+    flex-shrink: 0;
+}
+
+/* 버튼 스타일 */
+.controls {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Middle Footer */
+.middle-footer {
+    grid-column: 1 / 2; /* 첫 번째 열 */
+    background-color: #b8daff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer 스타일 */
+.footer {
+    grid-column: 1 / -1; /* 전체 열 차지 */
+    background-color: #e2e3e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
