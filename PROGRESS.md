@@ -12,7 +12,10 @@
 #### 프로젝트 사진
 ---
 
-![image](https://github.com/user-attachments/assets/8d502f84-a0fd-40f0-bb17-7de56360696a)
+![image](https://github.com/user-attachments/assets/c8e42a30-6b28-4ecd-b961-60d399311c6b)
+
+
+![img2](https://github.com/user-attachments/assets/9a8bc2fe-8e3d-44f2-a726-61e873e3d02f)
 
 
 
