@@ -5,7 +5,7 @@
 
 #### 프로젝트 일정
 ---
-
+![KakaoTalk_20241129_212055916](https://github.com/user-attachments/assets/e1f57c26-33fe-419f-9ec9-5df09f6dac95)
 
 
 
