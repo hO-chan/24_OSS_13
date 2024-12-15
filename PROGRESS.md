@@ -31,6 +31,7 @@
 
 ##### 전병찬
   - 화면 전환 기능 구현. [Commit Link](https://github.com/hO-chan/24_OSS_13/commit/bca908e9b6c679df01fd05b56054bfe5890462b5)
+  - 전환 기능 추가 및 ui 개선. [Commit Link](https://github.com/hO-chan/24_OSS_13/commit/ff34ac75ea75c21a2cb0013329ed65a8e6989f1e)
 
 ##### 최서연
   - 질병 질문 찾아보기(뇌졸증, 우울증) 뇌졸증은 해당 자료를 보고 행동 중심으로 질문 만들기. 예를 들어 양팔을 들 수 있냐, 똑바로 걸을 수 있냐 등 test1.html 페이지 변경 ([Commit Link](https://github.com/hO-chan/24_OSS_13/commit/72d72cbe187ccf698e2770a1246f7448b17008bf))
