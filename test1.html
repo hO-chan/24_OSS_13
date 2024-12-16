@@ -7,53 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        #Title {
-            font-size: 2rem;
-            font-weight: bold;
-            text-align: center;
-            padding: 20px 0;
-            background-color: #007bff;
-            color: white;
-        }
-
-        #NavBar {
-            background-color: #e9ecef;
-            padding: 10px 0;
-        }
-
-        header .nav-item .nav-link {
-            font-weight: bold;
-        }
-
-        header .nav-link.active {
-            background-color: #007bff;
-            color: white !important;
-        }
-
-        .main_main1 {
-            text-align: center;
-            margin: 30px auto;
-            padding: 20px;
-            max-width: 600px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            margin-top: 30px;
-            background-color: #e9ecef;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -73,7 +27,7 @@
                     <a class="nav-link" href="first_aid.html">응급처치 요령</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="test1.html" aria-current="page">페이지2</a>
+                    <a class="nav-link active" aria-current="page" href="self_diagnosis.html">설문</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="test2.html">기사 페이지</a>
@@ -84,91 +38,90 @@
             </div>
         </div>
     </header>
-
     <!-- 메인 콘텐츠 -->
     <main>
         <div class="main_main1">
             <h2>자가진단 서비스 - 페이지 2</h2>
             <form id="surveyForm">
                 <!-- 20개 질문 -->
-                <p>1) 걸음을 걷기 힘들다.<br>
-                    <input type="radio" name="Q1" value="1" required> 그렇다
+                <p>1) &nbsp;&nbsp;걸음을 걷기 힘들다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q1" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q1" value="0"> 그렇지 않다
                 </p>
-                <p>2) 사물이 두 개로 보인다.<br>
-                    <input type="radio" name="Q2" value="1" required> 그렇다
+                <p>2) &nbsp;&nbsp;사물이 두 개로 보인다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q2" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q2" value="0"> 그렇지 않다
                 </p>
-                <p>3) 혼돈이 자주 발생한다.<br>
-                    <input type="radio" name="Q3" value="1" required> 그렇다
+                <p>3) &nbsp;&nbsp;혼돈이 자주 발생한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q3" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q3" value="0"> 그렇지 않다
                 </p>
-                <p>4) 호흡 곤란이 생긴다.<br>
-                    <input type="radio" name="Q4" value="1" required> 그렇다
+                <p>4) &nbsp;&nbsp;호흡 곤란이 생긴다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q4" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q4" value="0"> 그렇지 않다
                 </p>
-                <p>5) 입술이 한쪽으로 돌아간다.<br>
-                    <input type="radio" name="Q5" value="1" required> 그렇다
+                <p>5)&nbsp;&nbsp; 입술이 한쪽으로 돌아간다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q5" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q5" value="0"> 그렇지 않다
                 </p>
-                <p>6) 눈이 갑자기 안 보인다.<br>
-                    <input type="radio" name="Q6" value="1" required> 그렇다
+                <p>6) &nbsp;&nbsp;눈이 갑자기 안 보인다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q6" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q6" value="0"> 그렇지 않다
                 </p>
-                <p>7) 어지럽다.<br>
-                    <input type="radio" name="Q7" value="1" required> 그렇다
+                <p>7)&nbsp;&nbsp; 어지럽다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q7" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q7" value="0"> 그렇지 않다
                 </p>
-                <p>8) 불면증이나 기면증이 있다.<br>
-                    <input type="radio" name="Q8" value="1" required> 그렇다
+                <p>8)&nbsp;&nbsp; 불면증이나 기면증이 있다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q8" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q8" value="0"> 그렇지 않다
                 </p>
-                <p>9) 감정이 격앙되거나 위축된다.<br>
-                    <input type="radio" name="Q9" value="1" required> 그렇다
+                <p>9) &nbsp;&nbsp;감정이 격앙되거나 위축된다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q9" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q9" value="0"> 그렇지 않다
                 </p>
-                <p>10) 죄의식이나 존재 가치가 없다고 느낀다.<br>
-                    <input type="radio" name="Q10" value="1" required> 그렇다
+                <p>10) &nbsp;&nbsp;죄의식이나 존재 가치가 없다고 느낀다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q10" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q10" value="0"> 그렇지 않다
                 </p>
-                <p>11) 우유부단함이 있다.<br>
-                    <input type="radio" name="Q11" value="1" required> 그렇다
+                <p>11) &nbsp;&nbsp;우유부단함이 있다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q11" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q11" value="0"> 그렇지 않다
                 </p>
-                <p>12) 자살 유혹을 느낀 적이 있다.<br>
-                    <input type="radio" name="Q12" value="1" required> 그렇다
+                <p>12)&nbsp;&nbsp; 자살 유혹을 느낀 적이 있다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q12" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q12" value="0"> 그렇지 않다
                 </p>
-                <p>13) 쉽게 피로감을 느낀다.<br>
-                    <input type="radio" name="Q13" value="1" required> 그렇다
+                <p>13)&nbsp;&nbsp; 쉽게 피로감을 느낀다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q13" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q13" value="0"> 그렇지 않다
                 </p>
-                <p>14) 인생에 목적이 없다고 느낀다.<br>
-                    <input type="radio" name="Q14" value="1" required> 그렇다
+                <p>14)&nbsp;&nbsp; 인생에 목적이 없다고 느낀다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q14" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q14" value="0"> 그렇지 않다
                 </p>
-                <p>15) 평소 취미 활동을 하는가?<br>
-                    <input type="radio" name="Q15" value="1" required> 그렇다
+                <p>15) &nbsp;&nbsp;평소 취미 활동을 하는가?<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q15" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q15" value="0"> 그렇지 않다
                 </p>
-                <p>16) 식욕에 변화가 있다.<br>
-                    <input type="radio" name="Q16" value="1" required> 그렇다
+                <p>16) &nbsp;&nbsp;식욕에 변화가 있다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q16" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q16" value="0"> 그렇지 않다
                 </p>
-                <p>17) 두통이나 소화불량이 자주 나타난다.<br>
-                    <input type="radio" name="Q17" value="1" required> 그렇다
+                <p>17) &nbsp;&nbsp;두통이나 소화불량이 자주 나타난다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q17" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q17" value="0"> 그렇지 않다
                 </p>
-                <p>18) 변비 또는 속에서 열이 난다.<br>
-                    <input type="radio" name="Q18" value="1" required> 그렇다
+                <p>18) &nbsp;&nbsp;변비 또는 속에서 열이 난다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q18" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q18" value="0"> 그렇지 않다
                 </p>
-                <p>19) 일을 시작하거나 유지하기 힘들다.<br>
-                    <input type="radio" name="Q19" value="1" required> 그렇다
+                <p>19) &nbsp;&nbsp;일을 시작하거나 유지하기 힘들다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q19" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q19" value="0"> 그렇지 않다
                 </p>
-                <p>20) 모든 일이 귀찮다.<br>
-                    <input type="radio" name="Q20" value="1" required> 그렇다
+                <p>20) &nbsp;&nbsp;모든 일이 귀찮다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="Q20" value="1" required> 그렇다&nbsp;
                     <input type="radio" name="Q20" value="0"> 그렇지 않다
                 </p>
 
