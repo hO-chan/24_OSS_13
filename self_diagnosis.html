@@ -11,6 +11,7 @@
     <link href="style.css" rel="stylesheet" />
     <style>
         body {
+
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
         }
@@ -38,13 +39,21 @@
             color: white !important;
         }
 
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
         .main_main1 {
+            display: inline-block;
             text-align: center;
             margin: 30px;
             padding: 20px;
             background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+
+            align-items: center;
         }
 
         .main_buttons {
@@ -83,7 +92,7 @@
                     <img src="Sample_icon.png" alt="icon Img" width="40" height="40" style="margin-right: 30px;" />
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="first_aid.html">응급처치 요령</a>
+                    <a class="nav-link" aria-current="page" href="first_aid.html">응급처치 요령</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="test1.html">페이지2</a>
@@ -99,6 +108,9 @@
     </header>
     <main>
         <div class="main_main1">
+            <div class="self_d_title" style="font-size: 30px; font-weight: bold;">
+                나의 건강 상태 알아보기
+            </div>
             <p>
                 <br>
                 질문1)&nbsp;&nbsp;나의 가족 구성원 중 당뇨병을 지닌 사람이 있다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
