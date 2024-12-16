@@ -136,36 +136,43 @@
     </footer>
 
 
-<!-- JavaScript -->
     <script>
         function submitTest1Survey() {
             const form = document.forms['surveyForm'];
             let testYesCount = 0;
             let testNoCount = 0;
-
+    
             // 누락된 질문 확인
             for (let i = 1; i <= 20; i++) {
                 const radios = form[`Q${i}`];
                 if (!radios.value) { // 질문에 응답이 없을 경우
                     alert(`질문 ${i}번에 응답해 주세요.`);
-                    unansweredQuestion.scrollIntoView({ behavior: "smooth", block: "center" }); // 자동 스크롤
+                    radios.scrollIntoView({ behavior: "smooth", block: "center" }); // 자동 스크롤
                     return; // 함수 종료, 이동 막음
                 }
-
+    
                 // 응답 카운트
                 if (radios.value === "1") testYesCount++;
                 else testNoCount++;
             }
-
-            // 결과를 localStorage에 저장
+    
+            // 기존의 self 결과 가져오기
+            const selfYesCount = parseInt(localStorage.getItem("selfYes")) || 0;
+            const selfNoCount = parseInt(localStorage.getItem("selfNo")) || 0;
+    
+            // test1 결과를 localStorage에 저장
             localStorage.setItem("testYes", testYesCount);
             localStorage.setItem("testNo", testNoCount);
-
+    
+            // 기존 self 결과와 test1 결과 합산 후 저장
+            localStorage.setItem("totalYes", selfYesCount + testYesCount);
+            localStorage.setItem("totalNo", selfNoCount + testNoCount);
+    
             // result.html로 이동
             window.location.href = "result.html";
         }
     </script>
-
+    
     
 
 

@@ -39,20 +39,6 @@
             background-color: #e9ecef;
             font-size: 0.9rem;
         }
-
-        .home-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .home-button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 
@@ -72,8 +58,8 @@
             <p>그렇다 비율: <span id="yesPercentage">0%</span></p>
             <p>그렇지 않다 비율: <span id="noPercentage">0%</span></p>
 
-            <!-- 홈 버튼 추가 -->
-            <button class="home-button" onclick="goHome()">Home</button>
+            <!-- 홈 버튼 -->
+            <button class="btn btn-primary mt-3" onclick="goHome()">홈으로</button>
         </div>
     </main>
 
@@ -83,14 +69,8 @@
 
     <script>
         // localStorage에서 데이터 가져오기
-        const selfYes = parseInt(localStorage.getItem("selfYes")) || 0;
-        const selfNo = parseInt(localStorage.getItem("selfNo")) || 0;
-        const testYes = parseInt(localStorage.getItem("testYes")) || 0;
-        const testNo = parseInt(localStorage.getItem("testNo")) || 0;
-
-        // 합산된 결과 계산
-        const totalYes = selfYes + testYes;
-        const totalNo = selfNo + testNo;
+        const totalYes = parseInt(localStorage.getItem("totalYes")) || 0;
+        const totalNo = parseInt(localStorage.getItem("totalNo")) || 0;
         const totalQuestions = totalYes + totalNo;
 
         const yesPercentage = totalQuestions > 0 ? ((totalYes / totalQuestions) * 100).toFixed(2) : 0;
@@ -102,13 +82,13 @@
         document.getElementById("yesPercentage").innerText = yesPercentage + "%";
         document.getElementById("noPercentage").innerText = noPercentage + "%";
 
-        // localStorage 데이터 삭제 (옵션)
-        localStorage.clear();
-
-        // Home 버튼 클릭 시 index.html로 이동하는 함수
+        // 홈 버튼 클릭 시 index.html로 이동
         function goHome() {
             window.location.href = "index.html";
         }
+
+        // localStorage 데이터 삭제 (옵션)
+        // localStorage.clear();
     </script>
 </body>
 
