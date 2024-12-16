@@ -2,51 +2,116 @@
 <html lang="ko">
 
 <head>
-    <title>Self_Doc - 결과 페이지</title>
+    <title>Self_Doc 결과 페이지</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script>
-        // URL 파라미터에서 결과 데이터를 가져와 비율 계산
-        function displayResults() {
-            const params = new URLSearchParams(window.location.search);
-            const yesCount = parseInt(params.get("yes")) || 0; // '그렇다' 개수
-            const noCount = parseInt(params.get("no")) || 0;   // '그렇지 않다' 개수
-
-            // 비율 계산
-            const total = yesCount + noCount;
-            const yesPercentage = total > 0 ? ((yesCount / total) * 100).toFixed(2) : 0;
-            const noPercentage = total > 0 ? ((noCount / total) * 100).toFixed(2) : 0;
-
-            // HTML에 데이터 표시
-            document.getElementById("yesCount").innerText = yesCount;
-            document.getElementById("noCount").innerText = noCount;
-            document.getElementById("yesPercentage").innerText = yesPercentage + "%";
-            document.getElementById("noPercentage").innerText = noPercentage + "%";
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
         }
 
-        // 페이지 로드 시 실행
-        window.onload = displayResults;
-    </script>
+        #Title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .result-container {
+            text-align: center;
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            background-color: #e9ecef;
+            font-size: 0.9rem;
+        }
+
+        .home-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div style="background-color: #007BFF; color: white; text-align: center; padding: 15px 0; font-size: 32px;">
+        <div id="Title">
             Self_Doc 결과 페이지
         </div>
     </header>
 
-    <main class="container mt-5">
-        <h2>설문조사 결과</h2>
-        <p><strong>그렇다 (Yes):</strong> <span id="yesCount"></span> 개</p>
-        <p><strong>그렇지 않다 (No):</strong> <span id="noCount"></span> 개</p>
-        <h3>비율</h3>
-        <p>그렇다 비율: <span id="yesPercentage"></span></p>
-        <p>그렇지 않다 비율: <span id="noPercentage"></span></p>
+    <main>
+        <div class="result-container">
+            <h2>설문 조사 결과</h2>
+            <p><strong>그렇다 (Yes):</strong> <span id="totalYes">0</span> 개</p>
+            <p><strong>그렇지 않다 (No):</strong> <span id="totalNo">0</span> 개</p>
+            <h3>비율</h3>
+            <p>그렇다 비율: <span id="yesPercentage">0%</span></p>
+            <p>그렇지 않다 비율: <span id="noPercentage">0%</span></p>
+
+            <!-- 홈 버튼 추가 -->
+            <button class="home-button" onclick="goHome()">Home</button>
+        </div>
     </main>
 
-    <footer class="text-center mt-5">&copy; 2024 Self_Doc</footer>
+    <footer>
+        &copy; 2024 Self_Doc | KW-Univ
+    </footer>
+
+    <script>
+        // localStorage에서 데이터 가져오기
+        const selfYes = parseInt(localStorage.getItem("selfYes")) || 0;
+        const selfNo = parseInt(localStorage.getItem("selfNo")) || 0;
+        const testYes = parseInt(localStorage.getItem("testYes")) || 0;
+        const testNo = parseInt(localStorage.getItem("testNo")) || 0;
+
+        // 합산된 결과 계산
+        const totalYes = selfYes + testYes;
+        const totalNo = selfNo + testNo;
+        const totalQuestions = totalYes + totalNo;
+
+        const yesPercentage = totalQuestions > 0 ? ((totalYes / totalQuestions) * 100).toFixed(2) : 0;
+        const noPercentage = totalQuestions > 0 ? ((totalNo / totalQuestions) * 100).toFixed(2) : 0;
+
+        // 결과 표시
+        document.getElementById("totalYes").innerText = totalYes;
+        document.getElementById("totalNo").innerText = totalNo;
+        document.getElementById("yesPercentage").innerText = yesPercentage + "%";
+        document.getElementById("noPercentage").innerText = noPercentage + "%";
+
+        // localStorage 데이터 삭제 (옵션)
+        localStorage.clear();
+
+        // Home 버튼 클릭 시 index.html로 이동하는 함수
+        function goHome() {
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 
 </html>
+
+
