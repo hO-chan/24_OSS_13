@@ -3,7 +3,6 @@
 
 <head>
     <title>Self_Doc</title>
-    <!-- Bootstrap 및 스타일 설정 -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -71,10 +70,10 @@
                     <img src="Sample_icon.png" alt="icon Img" width="40" height="40" style="margin-right: 30px;" />
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="first_aid.html">응급처치 요령</a>
+                    <a class="nav-link" href="first_aid.html">응급처치 요령</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="test1.html">페이지2</a>
+                    <a class="nav-link active" href="test1.html" aria-current="page">페이지2</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="test2.html">기사 페이지</a>
@@ -89,48 +88,88 @@
     <!-- 메인 콘텐츠 -->
     <main>
         <div class="main_main1">
-            <h2>자가진단 서비스</h2>
+            <h2>자가진단 서비스 - 페이지 2</h2>
             <form id="surveyForm">
-                <!-- 질문 -->
-                <p>질문1) 자주 외로움을 느낀다.<br>
+                <!-- 20개 질문 -->
+                <p>1) 걸음을 걷기 힘들다.<br>
                     <input type="radio" name="Q1" value="1" required> 그렇다
                     <input type="radio" name="Q1" value="0"> 그렇지 않다
                 </p>
-                <p>질문2) 자주 일을 잊어버린다.<br>
+                <p>2) 사물이 두 개로 보인다.<br>
                     <input type="radio" name="Q2" value="1" required> 그렇다
                     <input type="radio" name="Q2" value="0"> 그렇지 않다
                 </p>
-                <p>질문3) 잠들기 힘들거나 잠이 불편하거나 과도하게 잤다.<br>
+                <p>3) 혼돈이 자주 발생한다.<br>
                     <input type="radio" name="Q3" value="1" required> 그렇다
                     <input type="radio" name="Q3" value="0"> 그렇지 않다
                 </p>
-                <p>질문4) 무엇을 해도 재밌지가 않다.<br>
+                <p>4) 호흡 곤란이 생긴다.<br>
                     <input type="radio" name="Q4" value="1" required> 그렇다
                     <input type="radio" name="Q4" value="0"> 그렇지 않다
                 </p>
-                <p>질문5) 쉽게 피로감을 느낀다.<br>
+                <p>5) 입술이 한쪽으로 돌아간다.<br>
                     <input type="radio" name="Q5" value="1" required> 그렇다
                     <input type="radio" name="Q5" value="0"> 그렇지 않다
                 </p>
-                <p>질문6) 일에 집중이 되지 않는다.<br>
+                <p>6) 눈이 갑자기 안 보인다.<br>
                     <input type="radio" name="Q6" value="1" required> 그렇다
                     <input type="radio" name="Q6" value="0"> 그렇지 않다
                 </p>
-                <p>질문7) 입맛이 없다.<br>
+                <p>7) 어지럽다.<br>
                     <input type="radio" name="Q7" value="1" required> 그렇다
                     <input type="radio" name="Q7" value="0"> 그렇지 않다
                 </p>
-                <p>질문8) 일을 시작하거나 유지하기 힘들다.<br>
+                <p>8) 불면증이나 기면증이 있다.<br>
                     <input type="radio" name="Q8" value="1" required> 그렇다
                     <input type="radio" name="Q8" value="0"> 그렇지 않다
                 </p>
-                <p>질문9) 목과 가슴에 턱 막힌 느낌이 든다.<br>
+                <p>9) 감정이 격앙되거나 위축된다.<br>
                     <input type="radio" name="Q9" value="1" required> 그렇다
                     <input type="radio" name="Q9" value="0"> 그렇지 않다
                 </p>
-                <p>질문10) 모든 일이 귀찮다.<br>
+                <p>10) 죄의식이나 존재 가치가 없다고 느낀다.<br>
                     <input type="radio" name="Q10" value="1" required> 그렇다
                     <input type="radio" name="Q10" value="0"> 그렇지 않다
+                </p>
+                <p>11) 우유부단함이 있다.<br>
+                    <input type="radio" name="Q11" value="1" required> 그렇다
+                    <input type="radio" name="Q11" value="0"> 그렇지 않다
+                </p>
+                <p>12) 자살 유혹을 느낀 적이 있다.<br>
+                    <input type="radio" name="Q12" value="1" required> 그렇다
+                    <input type="radio" name="Q12" value="0"> 그렇지 않다
+                </p>
+                <p>13) 쉽게 피로감을 느낀다.<br>
+                    <input type="radio" name="Q13" value="1" required> 그렇다
+                    <input type="radio" name="Q13" value="0"> 그렇지 않다
+                </p>
+                <p>14) 인생에 목적이 없다고 느낀다.<br>
+                    <input type="radio" name="Q14" value="1" required> 그렇다
+                    <input type="radio" name="Q14" value="0"> 그렇지 않다
+                </p>
+                <p>15) 평소 취미 활동을 하는가?<br>
+                    <input type="radio" name="Q15" value="1" required> 그렇다
+                    <input type="radio" name="Q15" value="0"> 그렇지 않다
+                </p>
+                <p>16) 식욕에 변화가 있다.<br>
+                    <input type="radio" name="Q16" value="1" required> 그렇다
+                    <input type="radio" name="Q16" value="0"> 그렇지 않다
+                </p>
+                <p>17) 두통이나 소화불량이 자주 나타난다.<br>
+                    <input type="radio" name="Q17" value="1" required> 그렇다
+                    <input type="radio" name="Q17" value="0"> 그렇지 않다
+                </p>
+                <p>18) 변비 또는 속에서 열이 난다.<br>
+                    <input type="radio" name="Q18" value="1" required> 그렇다
+                    <input type="radio" name="Q18" value="0"> 그렇지 않다
+                </p>
+                <p>19) 일을 시작하거나 유지하기 힘들다.<br>
+                    <input type="radio" name="Q19" value="1" required> 그렇다
+                    <input type="radio" name="Q19" value="0"> 그렇지 않다
+                </p>
+                <p>20) 모든 일이 귀찮다.<br>
+                    <input type="radio" name="Q20" value="1" required> 그렇다
+                    <input type="radio" name="Q20" value="0"> 그렇지 않다
                 </p>
 
                 <!-- Finish 버튼 -->
@@ -151,14 +190,12 @@
             let yesCount = 0;
             let noCount = 0;
 
-            // 설문 조사 값 카운트
-            for (let i = 1; i <= 10; i++) {
+            for (let i = 1; i <= 20; i++) {
                 const value = form[`Q${i}`].value;
                 if (value === "1") yesCount++;
                 else noCount++;
             }
 
-            // 결과 페이지로 이동
             const url = `result.html?yes=${yesCount}&no=${noCount}`;
             window.location.href = url;
         }
@@ -166,3 +203,4 @@
 </body>
 
 </html>
+
