@@ -184,22 +184,47 @@
     </footer>
 
     <!-- JavaScript -->
+    <!-- JavaScript -->
     <script>
         function submitSurvey() {
             const form = document.forms['surveyForm'];
             let yesCount = 0;
             let noCount = 0;
+            let unanswered = false; // 질문 누락 여부 확인
 
+            // 모든 질문 검증
             for (let i = 1; i <= 20; i++) {
-                const value = form[`Q${i}`].value;
-                if (value === "1") yesCount++;
-                else noCount++;
+                const question = form[`Q${i}`];
+                let answered = false;
+
+            // 라디오 버튼 중 하나라도 체크되었는지 확인
+                for (let j = 0; j < question.length; j++) {
+                    if (question[j].checked) {
+                        answered = true;
+                        if (question[j].value === "1") yesCount++;
+                        else noCount++;
+                        break;
+                    }
+                }
+
+                // 질문에 응답하지 않은 경우
+                if (!answered) {
+                    unanswered = true;
+                    alert(`질문 ${i}에 응답해 주세요.`);
+                    question[0].focus(); // 첫 번째 라디오 버튼에 포커스
+                    return; // 이동 중단
+                }
             }
 
-            const url = `result.html?yes=${yesCount}&no=${noCount}`;
-            window.location.href = url;
+            // 모든 질문에 응답했다면 결과 페이지로 이동
+            if (!unanswered) {
+                const url = `result.html?yes=${yesCount}&no=${noCount}`;
+                window.location.href = url;
+            }
         }
     </script>
+
+    
 </body>
 
 </html>
