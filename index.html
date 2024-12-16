@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
     <title>Self_Doc</title>
@@ -11,9 +11,10 @@
 </head>
 
 <body>
+    <!-- 헤더 -->
     <header>
         <div id="Title">
-            <a href="index.html" style="color: white; text-decoration:none;">
+            <a href="index.html" style="color: white; text-decoration: none;">
                 Self_Doc
             </a>
         </div>
@@ -23,13 +24,13 @@
                     <img src="Sample_icon.png" alt="icon Img" width="40" height="40" style="margin-right: 30px;" />
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="first_aid.html">응급처치 요령</a>
+                    <a class="nav-link" href="first_aid.html">응급처치 요령</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="test1.html">페이지2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="test2.html">페이지3</a>
+                    <a class="nav-link" href="test2.html">기사 페이지</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">긴 이름 입력</a>
@@ -38,22 +39,52 @@
         </div>
     </header>
 
+    <!-- 메인 콘텐츠 -->
     <main>
         <div class="main_main1">
             <!-- 상단 슬라이더 박스 -->
             <div class="main_main1-top">
                 <div class="slider-container">
-                    <div id="slider" class="slider">
-                        <img src="image1.png" alt="이미지1" class="slider-image">
-                        <img src="image2.jpg" alt="이미지2" class="slider-image">
-                        <img src="image3.jpg" alt="이미지3" class="slider-image">
-                        <img src="image4.jpg" alt="이미지3" class="slider-image">
-                    </div>
+                    <!-- 슬라이드 1 -->
+                    <a href="news1.html" class="slider-item active">
+                        <img src="news1_image1.jpg" alt="예방접종 이미지" class="slider-image">
+                        <div class="slider-text">
+                            <h3>예방접종의 중요성</h3>
+                            <p>
+                                예방접종은 전 세계적으로 질병 확산을 막는 가장 효과적인 방법 중 하나입니다.
+                                특히 어린이와 노인층에서 면역력을 높이는 데 필수적입니다.
+                            </p>
+                        </div>
+                    </a>
+                
+                    <!-- 슬라이드 2 -->
+                    <a href="news2.html" class="slider-item">
+                        <img src="news2_image1.jpg" alt="운동 이미지" class="slider-image">
+                        <div class="slider-text">
+                            <h3>운동이 건강에 미치는 영향</h3>
+                            <p>
+                                규칙적인 운동은 신체와 정신 건강에 긍정적인 영향을 미칩니다.
+                                심혈관 질환과 비만을 예방합니다.
+                            </p>
+                        </div>
+                    </a>
+                
+                    <!-- 슬라이드 3 -->
+                    <a href="news3.html" class="slider-item">
+                        <img src="news3_image1.jpg" alt="식단 이미지" class="slider-image">
+                        <div class="slider-text">
+                            <h3>균형 잡힌 식단의 중요성</h3>
+                            <p>
+                                균형 잡힌 식단은 건강한 삶을 유지하고 만성 질환을 예방하는 데 필수적입니다.
+                            </p>
+                        </div>
+                    </a>
+                
                     <!-- 이전/다음 버튼 -->
                     <button id="prev-btn" class="slider-btn prev">〈</button>
                     <button id="next-btn" class="slider-btn next">〉</button>
-                </div>
-            </div>
+                </div> <!-- 슬라이더 컨테이너 닫는 태그 -->
+            </div> <!-- 상단 슬라이더 박스 닫는 태그 -->
 
             <!-- 하단 자가진단 박스 -->
             <div class="main_main1-bottom">
@@ -69,10 +100,13 @@
         </div>
     </main>
 
+    <!-- 푸터 -->
     <footer>
         &copy; 2024 Self_Doc | KW-Univ
     </footer>
 
+    <!-- 스크립트 -->
+    <script src="script.js"></script>
     <script>
         function startSelfDiagnosis() {
             alert('자가진단을 시작합니다.');
@@ -83,7 +117,6 @@
             alert('위치 기반 병원을 찾습니다.');
         }
     </script>
-    <script src="script.js"></script>
 </body>
 
 </html>
