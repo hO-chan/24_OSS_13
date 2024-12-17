@@ -9,7 +9,67 @@
     <link href="../style.css" rel="stylesheet" />
 
     <style>
+        .main_main1_content {
+            /*
+            border: 1px solid black;
+            */
+            height: inherit;
+            width: inherit;
+        }
 
+        .steps {
+            display: flex;
+            width: inherit;
+            height: 30%;
+            text-align: left;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .steps div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .fa_img_container {
+            /*
+            border: 1px solid black;
+            */
+
+            height: 90%;
+            width: 45%;
+            text-align: right;
+
+            background-color: lightgray;
+        }
+
+        .fa_img {
+            /*
+            border: 1px solid black;
+            */
+            height: 80%;
+            width: 80%;
+
+        }
+
+        .step_text {
+            /*
+            border: 1px solid black;
+            */
+            width: 50%;
+            margin-left: 5%;
+            height: 90%;
+
+
+        }
+
+        .step_title {
+            font-size: 30px;
+        }
+
+        .step_text p {
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -44,10 +104,91 @@
 
     <main>
         <div class="main_main1" style="text-align: center;">
-            <h2>심장 마비 응급 상황</h2>
-            <div class="main_main1_content">추가 내용</div>
+            <h2>심장 마비 응급 처치</h2>
+            <div class="main_main1_content">
+                <!--
+                    추가 내용
+                -->
+                <div class="steps step1">
+                    <div class="fa_img_container step1_img">
+                        <img src="heart_img/FA_H_의식확인.jpg" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">환자의 반응 확인<span>
+                                <p>
+                                    <br>어깨를 가볍게 두드리며
+                                    <br>“여보세요, 괜찮으세요?”를 외치면서
+                                    <br>환자의 반응을 확인합니다.
+                                </p>
+                    </div>
+                </div>
 
+                <div class="steps step2">
+                    <div class="fa_img_container step2_img">
+                        <img src="heart_img/FA_119.webp" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">119 신고<span>
+                                <p>
+                                    <br>환자의 의식(반응)이 없으면
+                                    <br>구체적으로 사람을 지목하여
+                                    <br>119 신고를 요청하고,
+                                    <br>자동심장충격기(AED)를 가져오도록 부탁합니다.
+                                </p>
+                    </div>
+                </div>
 
+                <div class="steps step3">
+                    <div class="fa_img_container step3_img">
+                        <img src="heart_img/fa_check_breath.jpg" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">호흡 확인<span>
+                                <p>
+                                    <br>환자의 얼굴과 가슴을 10초 이내로 관찰하여
+                                    <br>호흡이 있는지를 확인합니다.
+                                    <br>호흡이 없거나 비정상적이라면
+                                    <br>즉시 심폐소생술을 준비합니다.
+                                </p>
+                    </div>
+                </div>
+
+                <div class="steps step4">
+                    <div class="fa_img_container step4_img">
+                        <img src="heart_img/fa_CPR.jpg" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">심폐소생술 실시<span>
+                                <p>
+                                    <br>환자를 평평한 곳에 눕히고
+                                    <br>가슴 중앙에 손을 겹쳐 올립니다.
+                                    <br>팔을 곧게 펴고 몸 전체로 5~6cm 깊이로
+                                    <br>분당 100~120회 속도로 30회 가슴압박을 실시합니다.
+                                    <br>이후 인공호흡을 위해 환자의 머리를 젖히고
+                                    <br>턱을 들어올려 기도를 개방합니다.
+                                </p>
+                    </div>
+                </div>
+
+                <div class="steps step5">
+                    <div class="fa_img_container step5_img">
+                        <img src="heart_img/fa_rescue_breathing.png" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">인공호흡 실시<span>
+                                <p style="font-size: 19px;">
+                                    <br>환자의 코를 막은 다음 환자의 입에 밀착시킨 후
+                                    <br>구조자의 입으로 환자의 입을 완전히 덮습니다
+                                    <br>환자의 가슴이 올라올 정도로 1초 동안 숨을 불어 넣습니다.
+                                    <br>숨을 불어 넣을 때 환자의 가슴이 부풀어 오르는지 확인합니다.
+                                    <br>숨을 불어 넣은 후 입과 코를 떼어 공기가 배출되도록 합니다.
+                                    <br>총 2회 반복 후 구급대원이 올 때 까지
+                                    <br>심폐소생술과 인공호흡을 반복 시행합니다
+                                </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer style="text-align: center;">
