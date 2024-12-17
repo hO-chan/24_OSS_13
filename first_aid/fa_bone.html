@@ -9,40 +9,66 @@
     <link href="../style.css" rel="stylesheet" />
 
     <style>
-        .FA_menu_group {}
-
-        .FA_menu_group_small {
-            justify-content: center;
+        .main_main1_content {
+            /*
+            border: 1px solid black;
+            */
+            height: inherit;
+            width: inherit;
         }
 
-        .FA_menu_group_small div {
+        .steps {
+            display: flex;
+            width: inherit;
+            height: 30%;
+            text-align: left;
             padding: 15px;
-            vertical-align: middle;
-            /*텍스트 가운데를 기준으로 정렬*/
+            margin-bottom: 20px;
+        }
 
+        .steps div {
             display: inline-block;
-            height: 180px;
-            width: 200px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border-radius: 5px;
+            vertical-align: middle;
+        }
+
+        .fa_img_container {
+            /*
+            border: 1px solid black;
+            */
+
+            height: 90%;
+            width: 45%;
+            text-align: right;
+
+            background-color: lightgray;
+        }
+
+        .fa_img {
+            /*
+            border: 1px solid black;
+            */
+            height: 80%;
+            width: 80%;
 
         }
 
-        .FA_menu_group_small a:hover div {
-            background-color: #699eff;
+        .step_text {
+            /*
+            border: 1px solid black;
+            */
+            width: 50%;
+            margin-left: 5%;
+            height: 90%;
+
+
         }
 
-        .FA_menu_group_small a:hover {
-            color: rgb(255, 255, 255);
+        .step_title {
+            font-size: 30px;
         }
 
-
-        .FA_menu_group a {
-            text-decoration: none;
-            color: black;
-            font-size: 40px;
-
+        .step_text p {
+            font-size: 18px;
         }
     </style>
 </head>
@@ -78,10 +104,30 @@
 
     <main>
         <div class="main_main1" style="text-align: center;">
-            <h2>심장 마비 응급 상황</h2>
-            <div class="">추가 내용</div>
+            <h2>골절시 응급 처치 요령</h2>
+            <div class="main_main1_content">
+                <!--
+                    추가 내용
+                -->
+                <div class="steps step1">
+                    <div class="fa_img_container step1_img">
+                        <img src="bleeding_img/fa_bleed1.jpg" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">골절 상황 발생시<span>
+                                <p>
+                                    <br>먼저 119에 도움을 요청합니다. 이후 아래와 같이 응급처치를 실시합니다.
+                                    <br>골절된 환부를 움직이지 않도록 부목이나 단단한 물체로 고정한다.
+                                    <br>이때 부목은 환부의 위아래 관절까지 포함하여 고정한다.
+                                    <br>출혈이 있으면 깨끗한 천으로 압박 지혈한다. 뼈가 돌출되었다면 억지로 밀어넣지 않는다.
+                                    <br>이물질이 박혀있다면 절대 제거하지 말고 이물질 주위를 감싸 지혈한다.
+                                    <br>부종 및 통증을 완화하기위해 냉찜질을 한다. 얼음이 피부에 직접 닿지 않게 천으로 감싸고
+                                    20분이상 적용하였다면 20분 이후에 다시 적용한다.
+                                </p>
+                    </div>
+                </div>
 
-
+            </div>
     </main>
 
     <footer style="text-align: center;">

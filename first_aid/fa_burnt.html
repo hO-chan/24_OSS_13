@@ -9,40 +9,66 @@
     <link href="../style.css" rel="stylesheet" />
 
     <style>
-        .FA_menu_group {}
-
-        .FA_menu_group_small {
-            justify-content: center;
+        .main_main1_content {
+            /*
+            border: 1px solid black;
+            */
+            height: inherit;
+            width: inherit;
         }
 
-        .FA_menu_group_small div {
+        .steps {
+            display: flex;
+            width: inherit;
+            height: 30%;
+            text-align: left;
             padding: 15px;
-            vertical-align: middle;
-            /*텍스트 가운데를 기준으로 정렬*/
+            margin-bottom: 20px;
+        }
 
+        .steps div {
             display: inline-block;
-            height: 180px;
-            width: 200px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border-radius: 5px;
+            vertical-align: middle;
+        }
+
+        .fa_img_container {
+            /*
+            border: 1px solid black;
+            */
+
+            height: 90%;
+            width: 45%;
+            text-align: right;
+
+            background-color: lightgray;
+        }
+
+        .fa_img {
+            /*
+            border: 1px solid black;
+            */
+            height: 80%;
+            width: 80%;
 
         }
 
-        .FA_menu_group_small a:hover div {
-            background-color: #699eff;
+        .step_text {
+            /*
+            border: 1px solid black;
+            */
+            width: 50%;
+            margin-left: 5%;
+            height: 90%;
+
+
         }
 
-        .FA_menu_group_small a:hover {
-            color: rgb(255, 255, 255);
+        .step_title {
+            font-size: 30px;
         }
 
-
-        .FA_menu_group a {
-            text-decoration: none;
-            color: black;
-            font-size: 40px;
-
+        .step_text p {
+            font-size: 18px;
         }
     </style>
 </head>
@@ -78,10 +104,45 @@
 
     <main>
         <div class="main_main1" style="text-align: center;">
-            <h2>심장 마비 응급 상황</h2>
-            <div class="">추가 내용</div>
+            <h2>화상 발생시 응급 처치 요령</h2>
+            <div class="main_main1_content">
+                <!--
+                    추가 내용
+                -->
+                <div class="steps step1">
+                    <div class="fa_img_container step1_img">
+                        <img src="bleeding_img/fa_bleed1.jpg" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">열상 화상 응급처치<span>
+                                <p>
 
+                                    <br>화상 부위를 찬물에 20분 이상 담가 열기를 식힌다.
+                                    <br>(단, 뜨거운 액체에 화상을 입은 경우 옷을 벗지 않고 그대로 식힌다.)
+                                    <br>얼음과 수압이 센 물의 사용을 자제하고 환부를 문지르면 절대로 안된다.
+                                    <br>이후 물집이 생긴다면 절대 터뜨리지 않는다.
+                                    <br>시계, 반지 등의 장신구는 피부가 부어오르기 전 최대한 빨리 제거한다.
+                                    <br>화상 부위에 바센이나 거즈로 덮어주고 붕대로 감아준다.
+                                </p>
+                    </div>
+                </div>
 
+                <div class="steps step2">
+                    <div class="fa_img_container step2_img">
+                        <img src="bleeding_img/fa_bleed2.jpg" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">병원에 가야하는 경우<span>
+                                <p>
+                                    <br> - 화공 약품이나 전기 화상, 흡입 화상
+                                    <br> - 화상 부위가 얼굴, 손, 발, 관절, 생식기관인 경우
+                                    <br> - 화상의 부위가 넓은 경우
+                                    <br> - 화상에 의한 통증이 계속될 경우
+                                </p>
+                    </div>
+                </div>
+
+            </div>
     </main>
 
     <footer style="text-align: center;">

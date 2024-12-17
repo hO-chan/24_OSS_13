@@ -9,40 +9,66 @@
     <link href="../style.css" rel="stylesheet" />
 
     <style>
-        .FA_menu_group {}
-
-        .FA_menu_group_small {
-            justify-content: center;
+        .main_main1_content {
+            /*
+            border: 1px solid black;
+            */
+            height: inherit;
+            width: inherit;
         }
 
-        .FA_menu_group_small div {
+        .steps {
+            display: flex;
+            width: inherit;
+            height: 30%;
+            text-align: left;
             padding: 15px;
-            vertical-align: middle;
-            /*텍스트 가운데를 기준으로 정렬*/
+            margin-bottom: 20px;
+        }
 
+        .steps div {
             display: inline-block;
-            height: 180px;
-            width: 200px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border-radius: 5px;
+            vertical-align: middle;
+        }
+
+        .fa_img_container {
+            /*
+            border: 1px solid black;
+            */
+
+            height: 90%;
+            width: 45%;
+            text-align: right;
+
+            background-color: lightgray;
+        }
+
+        .fa_img {
+            /*
+            border: 1px solid black;
+            */
+            height: 80%;
+            width: 80%;
 
         }
 
-        .FA_menu_group_small a:hover div {
-            background-color: #699eff;
+        .step_text {
+            /*
+            border: 1px solid black;
+            */
+            width: 50%;
+            margin-left: 5%;
+            height: 90%;
+
+
         }
 
-        .FA_menu_group_small a:hover {
-            color: rgb(255, 255, 255);
+        .step_title {
+            font-size: 30px;
         }
 
-
-        .FA_menu_group a {
-            text-decoration: none;
-            color: black;
-            font-size: 40px;
-
+        .step_text p {
+            font-size: 18px;
         }
     </style>
 </head>
@@ -78,10 +104,29 @@
 
     <main>
         <div class="main_main1" style="text-align: center;">
-            <h2>심장 마비 응급 상황</h2>
-            <div class="">추가 내용</div>
+            <h2>일사병시 응급 처치 요령</h2>
+            <div class="main_main1_content">
+                <!--
+                    추가 내용
+                -->
+                <div class="steps step1">
+                    <div class="fa_img_container step1_img">
+                        <img src="bleeding_img/fa_bleed1.jpg" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">일사병 환자 발생시<span>
+                                <p>
 
-
+                                    <br>환자를 직사광선이 없는 그늘진 장소로 옮긴다.
+                                    <br>입고있는 옷을 느슨하게 하고 물을 환자의 몸에 뿌리거나 젖은 수건으로 몸을 닦아준다.
+                                    <br>얼음이나 물을 목,겨드랑이 등에 대어 체온을 빠르게 내릴 수 있게 한다.
+                                    <br>환자의 의식이 돌아오면 차가운 물이나 이온 음료를 천천히 마시게 한다.
+                                    <br>단, 구토를 하는 경우에 억지로 마시게 해서는 안된다.
+                                    <br>환자가 의식을 잃거나 혼미하다면 119에 신고한다.
+                                </p>
+                    </div>
+                </div>
+            </div>
     </main>
 
     <footer style="text-align: center;">
