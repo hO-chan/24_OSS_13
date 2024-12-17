@@ -120,7 +120,7 @@
             const form = document.forms['surveyForm'];
             let selfYesCount = 0;
             let selfNoCount = 0;
-    
+
             // 누락된 질문 확인
             for (let i = 1; i <= 8; i++) {
                 const radios = form[`Q${i}`];
@@ -129,27 +129,25 @@
                     unansweredQuestion.scrollIntoView({ behavior: "smooth", block: "center" }); // 자동 스크롤
                     return; // 함수 종료, 이동 막음
                 }
-    
+
                 // 응답 카운트
                 if (radios.value === "1") selfYesCount++;
                 else selfNoCount++;
             }
-    
+
             // 결과를 localStorage에 저장
             localStorage.setItem("selfYes", selfYesCount);
             localStorage.setItem("selfNo", selfNoCount);
-    
+
             // test1.html로 이동
             window.location.href = "test1.html";
         }
     </script>
-    
-    
+
+
 
     <!-- boot strap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
-
-
