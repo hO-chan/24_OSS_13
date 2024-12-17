@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Self_Doc - 페이지 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+
+    <style>
+        .main_main1_content {
+            /*
+            border: 1px solid black;
+            */
+            height: inherit;
+            width: inherit;
+        }
+
+        .steps {
+            display: flex;
+            width: inherit;
+            height: 30%;
+            text-align: left;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .steps div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .fa_img_container {
+            /*
+            border: 1px solid black;
+            */
+
+            height: 90%;
+            width: 45%;
+            text-align: right;
+
+            background-color: lightgray;
+        }
+
+        .fa_img {
+            /*
+            border: 1px solid black;
+            */
+            height: 80%;
+            width: 80%;
+
+        }
+
+        .step_text {
+            /*
+            border: 1px solid black;
+            */
+            width: 50%;
+            margin-left: 5%;
+            height: 90%;
+
+
+        }
+
+        .step_title {
+            font-size: 30px;
+        }
+
+        .step_text p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="Title">
+            <a href="../index.html" style="color: white; text-decoration:none;">
+                Self_Doc
+            </a>
+        </div>
+        <!-- 네비게이션 -->
+        <div id="NavBar">
+            <div class="nav nav-pills nav-justified">
+                <li>
+                    <img src="../Sample_icon.png" alt="icon Img" width="40" height="40" style="margin-right: 30px;" />
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../first_aid.html">응급처치 요령</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../test1.html">페이지2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../test2.html">페이지3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-disabled="true">긴 이름 입력</a>
+                </li>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_main1" style="text-align: center;">
+            <h2>저체온증 응급 처치 요령</h2>
+            <div class="main_main1_content">
+                <!--
+                    추가 내용
+                -->
+                <div class="steps step1">
+                    <div class="fa_img_container step1_img">
+                        <img src="cold_img/fa_cold1.jpg" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">저체온증 발생시<span>
+                                <p>
+                                    <br>119에 신고하고 환자를 추운 환경에서 따듯한 환경으로 옮긴다.
+                                    <br>만약 옷이 젖어있다면 제거하고 환자의 몸 전체를 담요로 감싸준다. 특히 머리도 반드시 감싼다.
+                                    <br>양 팔꿈치를 서로 교차로 잡아 겨드랑이를 감싸 체온이 더이상 낮아지지 않게한다.
+                                    <br>만약 따듯한 환경이 없다면 사람이 직접 안아주는 것도 좋은 방법이다.
+                                    <br>열원이 존재한다면 신체의 말단 부위가 아닌 흉부나 복부 등 중심부의 체온을 올리는 것이 효과적이다.
+                                    <br>저체온 상태의 환자는 심장의 근육이 매우 불안하여 약간의 자극에도 위험할 수 있으니 환자의 자세를 바꿀 때 특히 주의해야한다.
+                                </p>
+                    </div>
+                </div>
+
+                <div class="steps step2">
+                    <div class="fa_img_container step2_img">
+                        <img src="cold_img/fa_cold2.jpg" class="fa_img">
+                    </div>
+                    <div class="step_text">
+                        <span class="step_title">심정지 상태 확인<span>
+                                <p>
+                                    <br>저체온증 환자는 맥박이 매우 느리므로 심정지 상태 확인을 위해서 맥박을 30초 이상 충분히 확인해야한다.
+                                    <br>심정지 상태인 경우에는 적어도 체온이 30도 이상이 될 때 까지는 심폐소생술을 계속해야한다.
+                                </p>
+                    </div>
+                </div>
+
+            </div>
+    </main>
+
+    <footer style="text-align: center;">
+        &copy; 2024 Self_Doc
+    </footer>
+
+</body>
+
+</html>

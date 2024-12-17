@@ -11,15 +11,30 @@
     <style>
         .FA_menu_group {}
 
-        .FA_menu_group_small {}
+        .FA_menu_group_small {
+            justify-content: center;
+        }
 
         .FA_menu_group_small div {
+            padding: 15px;
+            vertical-align: middle;
+            /*텍스트 가운데를 기준으로 정렬*/
+
             display: inline-block;
-            height: 40%;
-            width: 45%;
+            height: 180px;
+            width: 200px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            border-radius: 5px;
 
+        }
+
+        .FA_menu_group_small a:hover div {
+            background-color: #699eff;
+        }
+
+        .FA_menu_group_small a:hover {
+            color: rgb(255, 255, 255);
         }
 
 
@@ -68,39 +83,55 @@
 
             <div class="FA_menu_group">
                 <div class="FA_menu_group_small">
-                    <div class="m-1">
-                        <a href="#">1</a>
-                    </div>
-                    <div class="m-1">
-                        <a href="#">2</a>
-                    </div>
+                    <a href="first_aid/fa_heart.html">
+                        <div class="m-1">
+                            <br>심장마비
+                        </div>
+                    </a>
+                    <a href="first_aid/fa_breath.html">
+                        <div class="m-1">
+                            <br>기도막힘
+                        </div>
+                    </a>
                 </div>
 
                 <div class="FA_menu_group_small">
-                    <div class="m-1">
-                        <a href="#">3</a>
-                    </div>
-                    <div class="m-1">
-                        <a href="#">4</a>
-                    </div>
+                    <a href="first_aid/fa_bleeding.html">
+                        <div class="m-1">
+                            <br>과다출혈
+                        </div>
+                    </a>
+                    <a href="first_aid/fa_burnt.html">
+                        <div class="m-1">
+                            <br>화상
+                        </div>
+                    </a>
                 </div>
 
                 <div class="FA_menu_group_small">
-                    <div class="m-1">
-                        <a href="#">5</a>
-                    </div>
-                    <div class="m-1">
-                        <a href="#">6</a>
-                    </div>
+                    <a href="first_aid/fa_over_breath.html">
+                        <div class="m-1">
+                            <br>과호흡
+                        </div>
+                    </a>
+                    <a href="first_aid/fa_bone.html">
+                        <div class="m-1">
+                            <br>골절
+                        </div>
+                    </a>
                 </div>
 
                 <div class="FA_menu_group_small">
-                    <div class="m-1">
-                        <a href="#">7</a>
-                    </div>
-                    <div class="m-1">
-                        <a href="#">8</a>
-                    </div>
+                    <a href="first_aid/fa_cold.html">
+                        <div class="m-1">
+                            <br>저체온증
+                        </div>
+                    </a>
+                    <a href="first_aid/fa_hot.html">
+                        <div class="m-1">
+                            <br>일사병
+                        </div>
+                    </a>
                 </div>
             </div>
     </main>
@@ -108,6 +139,7 @@
     <footer style="text-align: center;">
         &copy; 2024 Self_Doc
     </footer>
+
 </body>
 
 </html>
