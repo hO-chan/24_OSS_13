@@ -39,45 +39,67 @@
     </header>
 
     <main class="container my-4">
-        <div class="main_main1">
-            <h2>최신 건강 관련 기사</h2>
-
-            <!-- 이미지와 글을 동일한 폭으로 설정 -->
-            <div class="mb-5" style="max-width: 640px;">
-                <img src="news1_image1.jpg" alt="예방접종 이미지" class="img-fluid mb-3">
-                <article>
-                    <h3>예방접종의 중요성</h3>
-                    <p>
-                        최근 연구에 따르면 예방접종은 전 세계적으로 질병 확산을 막는 가장 효과적인 방법 중 하나입니다.
-                        특히, 어린이와 노인층에서 면역력을 높이는 데 필수적입니다.
-                        예방접종을 통해 심각한 질병을 방지하고 집단 면역을 강화할 수 있습니다.
-                    </p>
-                    <p>
-                        전문가들은 정기적인 예방접종 일정을 준수할 것을 권장하며, 정부도 다양한 무료 예방접종 프로그램을 시행하고 있습니다.
-                    </p>
-                </article>
+        <div class="row">
+            <!-- 메인 기사 섹션 -->
+            <div class="col-md-8">
+                <div class="main_main1">
+                    <!-- 제목과 날짜 -->
+                    <h2 class="mb-1">예방접종과 손 씻기의 중요성</h2>
+                    <p class="text-muted mb-4" style="font-size: 0.9rem;">입력 2024.12.10. 오후 7:00</p>
+    
+                    <!-- 첫 번째 기사 -->
+                    <div class="mb-5">
+                        <div class="d-flex flex-column flex-md-row align-items-start gap-4">
+                            <img src="news1_image1.jpg" alt="예방접종 이미지" class="img-fluid rounded" style="max-width: 300px;">
+                            <article>
+                                <h3>예방접종의 중요성</h3>
+                                <p>
+                                    최근 연구에 따르면 예방접종은 전 세계적으로 질병 확산을 막는 가장 효과적인 방법 중 하나입니다.
+                                    특히, 어린이와 노인층에서 면역력을 높이는 데 필수적입니다.
+                                    예방접종을 통해 심각한 질병을 방지하고 집단 면역을 강화할 수 있습니다.
+                                </p>
+                                <p>
+                                    전문가들은 정기적인 예방접종 일정을 준수할 것을 권장하며, 정부도 다양한 무료 예방접종 프로그램을 시행하고 있습니다.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+    
+                    <!-- 두 번째 기사 -->
+                    <div class="mb-5">
+                        <div class="d-flex flex-column flex-md-row align-items-start gap-4">
+                            <img src="news1_image2.jpg" alt="손 씻기 이미지" class="img-fluid rounded" style="max-width: 300px;">
+                            <article>
+                                <h3>올바른 손 씻기의 중요성</h3>
+                                <p>
+                                    올바른 손 씻기는 바이러스 및 세균 감염을 예방하는 첫걸음입니다. 비누와 물로 최소 20초 동안 손을 씻으면 대부분의 병원균을 제거할 수 있습니다.
+                                    특히 식사 전, 화장실 사용 후에는 반드시 손을 씻는 습관을 들여야 합니다. 다들 건강하게 오래 오래 살길 바랍니다.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="mb-5" style="max-width: 640px;">
-                <img src="news1_image2.jpg" alt="손 씻기 이미지" class="img-fluid mb-3">
-                <article>
-                    <h3>올바른 손 씻기의 중요성</h3>
-                    <p>
-                        올바른 손 씻기는 바이러스 및 세균 감염을 예방하는 첫걸음입니다. 비누와 물로 최소 20초 동안 손을 씻으면 대부분의 병원균을 제거할 수 있습니다.
-                        특히 식사 전, 화장실 사용 후에는 반드시 손을 씻는 습관을 들여야 합니다. 다들 건강하게 오래 오래 살아용.
-                    </p>
-                </article>
-            </div>
-        </div>
-
-        <div class="main_side1">
-            <h4>관련 기사</h4>
-            <ul>
-                <li><a href="news2.html">운동이 건강에 미치는 영향</a></li>
-                <li><a href="news3.html">균형 잡힌 식단의 중요성</a></li>
-            </ul>
+    
+            <!-- 관련 기사 섹션 (메인 기사와 정렬) -->
+            <aside class="col-md-4">
+                <div class="main_side1 bg-light p-4 rounded">
+                    <h4 class="mb-4">관련 기사</h4>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="news2_image1.jpg" alt="운동 이미지" class="img-thumbnail me-3" style="width: 80px; height: 80px;">
+                            <a href="news2.html" class="text-decoration-none">운동이 건강에 미치는 영향</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="news3_image1.jpg" alt="식단 이미지" class="img-thumbnail me-3" style="width: 80px; height: 80px;">
+                            <a href="news3.html" class="text-decoration-none">균형 잡힌 식단의 중요성</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
         </div>
     </main>
+    
 
     <footer class="text-center py-3">
         KW-Univ | Self_Doc
