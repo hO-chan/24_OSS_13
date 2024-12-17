@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>Aortic Aneurysm Self-Diagnosis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+        }
+
+        #Title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        #NavBar .nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            margin: 50px auto;
+            max-width: 800px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #343a40;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #495057;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div id="Title">
+            <a href="index.html" style="color: white; text-decoration: none;">
+                Self_Doc
+            </a>
+        </div>
+        <div id="NavBar">
+            <div class="nav nav-pills nav-justified">
+                <li>
+                    <img src="Sample_icon.png" alt="icon Img" width="40" height="40" style="margin-right: 30px;" />
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="first_aid.html">응급처치 요령</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="aortic_self_diagnosis.html">자가진단</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="test2.html">기사 페이지</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">긴 이름 입력</a>
+                </li>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>대동맥류 자가진단 - 설문지</h2>
+        <form id="surveyForm">
+            <!-- Questions -->
+            <p>
+                질문1)&nbsp;&nbsp;가족 중 대동맥류 또는 심혈관 질환 병력이 있다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q1" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q1" value=0>
+                <br><br>
+                질문2)&nbsp;&nbsp;흡연 경험이 있거나 현재 흡연 중이다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q2" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q2" value=0>
+                <br><br>
+                질문3)&nbsp;&nbsp;고혈압 진단을 받은 적이 있다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q3" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q3" value=0>
+                <br><br>
+                질문4)&nbsp;&nbsp;흉통 또는 등 통증을 자주 느낀다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q4" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q4" value=0>
+                <br><br>
+                질문5)&nbsp;&nbsp;복부에서 박동이 느껴질 때가 있다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q5" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q5" value=0>
+                <br><br>
+                질문6)&nbsp;&nbsp;콜레스테롤 수치가 높다는 진단을 받았다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q6" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q6" value=0>
+                <br><br>
+                질문7)&nbsp;&nbsp;운동 부족으로 체중이 많이 나간다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q7" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q7" value=0>
+                <br><br>
+                질문8)&nbsp;&nbsp;심장 박동이 불규칙하거나 숨이 차다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q8" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q8" value=0>
+                <br><br>
+                질문9)&nbsp;&nbsp;복부나 흉부에 원인 모를 압박감이 느껴진다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q9" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q9" value=0>
+                <br><br>
+                질문10)&nbsp;&nbsp;동맥 경화 진단을 받은 적이 있다.<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                그렇다<input type="radio" name="Q10" value=1 required>
+                &nbsp;
+                그렇지않다<input type="radio" name="Q10" value=0>
+                <br><br>
+            </p>
+
+            <!-- Submit Button -->
+            <button class="btn btn-primary mt-3" type="button" onclick="submitSelfSurvey()">Next</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Self_Doc | KW-Univ
+    </footer>
+
+    <script>
+        function submitSelfSurvey() {
+            const form = document.forms['surveyForm'];
+            let selfYesCount = 0;
+            let selfNoCount = 0;
+
+            // Check for unanswered questions
+            for (let i = 1; i <= 10; i++) {
+                const radios = form[`Q${i}`];
+                if (!radios.value) {
+                    alert(`질문 ${i}번에 응답해 주세요.`);
+                    return;
+                }
+
+                // Count responses
+                if (radios.value === "1") selfYesCount++;
+                else selfNoCount++;
+            }
+
+            // Store results in localStorage
+            localStorage.setItem("selfYes", selfYesCount);
+            localStorage.setItem("selfNo", selfNoCount);
+
+            // Redirect to result page
+            window.location.href = "test1.html";
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
