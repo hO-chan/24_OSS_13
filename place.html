@@ -71,6 +71,7 @@
             cursor: pointer;
             text-align: center;
             font-size: 16px;
+            width: fit-content;
         }
 
         .back-button:hover {
@@ -81,12 +82,16 @@
 
 <body>
     <h1>병원 찾기 서비스</h1>
-    <!-- 사용자 입력 -->
-    <input type="text" id="cityInput" placeholder="도시명 (예: 서울특별시)" />
-    <input type="text" id="districtInput" placeholder="지역명 (예: 강남구)" />
-    <button onclick="fetchHospitals()">병원 검색</button>
+
+    <div class="search-container">
+        <input type="text" id="cityInput" placeholder="도시명 (예: 서울특별시)" />
+        <input type="text" id="districtInput" placeholder="지역명 (예: 강남구)" />
+        <button onclick="fetchHospitals()">병원 검색</button>
+    </div>
 
     <div id="results"></div>
+
+    <button class="back-button" onclick="goBack()">홈으로 돌아가기</button>
 
     <script>
         const serviceKey = "a8py4NMcWZ8IBMy3bFgGz7nkEO7rRQsL5UuXV2u25mR3QOIr9FeSLQ62UuK8bTMnfKbz7VQFv94fXwUc8nPSCA%3D%3D";
@@ -140,6 +145,10 @@
                 console.error("API 호출 중 오류:", error);
                 resultsContainer.innerHTML = `<p>데이터를 불러오는 중 오류가 발생했습니다.<br>상세 오류: ${error.message}</p>`;
             }
+        }
+
+        function goBack() {
+            window.location.href = 'index.html';
         }
     </script>
 </body>
