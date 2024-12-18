@@ -14,7 +14,37 @@
 
         h1 {
             text-align: center;
-            color: #0d6efd;
+            color: white;
+            background-color: #0d6efd;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 0 0 20px 0;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #0b5ed7;
         }
 
         #results {
@@ -28,16 +58,39 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #0b5ed7;
+        }
     </style>
 </head>
 <body>
     <h1>병원 찾기 서비스</h1>
-    <!-- 사용자 입력 -->
-    <input type="text" id="cityInput" placeholder="도시명 (예: 서울특별시)" />
-    <input type="text" id="districtInput" placeholder="지역명 (예: 강남구)" />
-    <button onclick="fetchHospitals()">병원 검색</button>
+
+    <!-- 검색 입력창과 버튼을 감싸는 컨테이너 -->
+    <div class="search-container">
+        <input type="text" id="cityInput" placeholder="도시명 (예: 서울특별시)" />
+        <input type="text" id="districtInput" placeholder="지역명 (예: 강남구)" />
+        <button onclick="fetchHospitals()">병원 검색</button>
+    </div>
     
     <div id="results"></div>
+
+    <!-- index.html로 돌아가는 버튼 -->
+    <button class="back-button" onclick="goToIndex()">홈으로 돌아가기</button>
 
     <script>
         const serviceKey = "a8py4NMcWZ8IBMy3bFgGz7nkEO7rRQsL5UuXV2u25mR3QOIr9FeSLQ62UuK8bTMnfKbz7VQFv94fXwUc8nPSCA%3D%3D";
@@ -92,7 +145,11 @@
                 resultsContainer.innerHTML = `<p>데이터를 불러오는 중 오류가 발생했습니다.<br>상세 오류: ${error.message}</p>`;
             }
         }
+
+        // index.html로 이동하는 함수
+        function goToIndex() {
+            window.location.href = 'index.html';
+        }
     </script>
 </body>
 </html>
-
