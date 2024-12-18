@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>병원 찾기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0d6efd;
+        }
+
+        #results {
+            margin-top: 20px;
+        }
+
+        .hospital {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>병원 찾기 서비스</h1>
+    <!-- 사용자 입력 -->
+    <input type="text" id="cityInput" placeholder="도시명 (예: 서울특별시)" />
+    <input type="text" id="districtInput" placeholder="지역명 (예: 강남구)" />
+    <button onclick="fetchHospitals()">병원 검색</button>
+    
+    <div id="results"></div>
+
+    <script>
+        const serviceKey = "a8py4NMcWZ8IBMy3bFgGz7nkEO7rRQsL5UuXV2u25mR3QOIr9FeSLQ62UuK8bTMnfKbz7VQFv94fXwUc8nPSCA%3D%3D";
+        const endpoint = "http://apis.data.go.kr/B552657/HsptlAsembySearchService/getHsptlMdcncListInfoInqire";
+
+        async function fetchHospitals() {
+            const city = document.getElementById("cityInput").value.trim();
+            const district = document.getElementById("districtInput").value.trim();
+            const resultsContainer = document.getElementById("results");
+
+            // 입력값 검증
+            if (!city) {
+                alert("도시명을 입력해 주세요.");
+                return;
+            }
+
+            if (!district) {
+                alert("지역명을 입력해 주세요.");
+                return;
+            }
+
+            // API 호출 URL 구성 (Q0=도시명, Q1=지역명)
+            const url = `${endpoint}?serviceKey=${serviceKey}&Q0=${encodeURIComponent(city)}&Q1=${encodeURIComponent(district)}&pageNo=1&numOfRows=10&_type=json`;
+
+            try {
+                // API 요청
+                const response = await fetch(url);
+                const data = await response.json();
+
+                console.log("API 응답 데이터:", data); // 확인용
+
+                // 결과 처리
+                if (data.response.body.items.item) {
+                    const hospitals = data.response.body.items.item;
+                    resultsContainer.innerHTML = ""; // 기존 결과 초기화
+
+                    hospitals.forEach(hospital => {
+                        const hospitalDiv = document.createElement("div");
+                        hospitalDiv.className = "hospital";
+                        hospitalDiv.innerHTML = `
+                            <strong>병원명:</strong> ${hospital.dutyName || "정보 없음"}<br>
+                            <strong>주소:</strong> ${hospital.dutyAddr || "정보 없음"}<br>
+                            <strong>전화번호:</strong> ${hospital.dutyTel1 || "정보 없음"}<br>
+                        `;
+                        resultsContainer.appendChild(hospitalDiv);
+                    });
+                } else {
+                    resultsContainer.innerHTML = "<p>해당 위치에 병원이 없습니다.</p>";
+                }
+            } catch (error) {
+                console.error("API 호출 중 오류:", error);
+                resultsContainer.innerHTML = `<p>데이터를 불러오는 중 오류가 발생했습니다.<br>상세 오류: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
+
